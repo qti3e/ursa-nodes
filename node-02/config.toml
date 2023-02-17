@@ -1,0 +1,71 @@
+[network_config]
+mdns = false
+relay_server = true
+autonat = true
+relay_client = true
+bootstrapper = false
+swarm_addrs = ["/ip4/0.0.0.0/tcp/26009", "/ip4/0.0.0.0/udp/24890/quic-v1"]
+bootstrap_nodes = ["/ip4/159.223.211.234/tcp/6009/p2p/12D3KooWDji7xMLia6GAsyr4oiEFD2dd3zSryqNhfxU3Grzs1r9p", "/ip4/146.190.232.131/tcp/6009/p2p/12D3KooWGw8vCj9XayJDMXUiox6pCUFm7oVuWkDJeE2H9SDQVEcM"]
+database_path = "data/ursa_db"
+identity = "default"
+keystore_path = "keystore"
+tracker = "https://tracker.ursa.earth/register"
+kad_replication_factor = 8
+kad_walk_interval = 300
+
+[provider_config]
+indexer_url = "https://dev.cid.contact"
+database_path = "data/index_provider_db"
+
+[server_config]
+addresses = ["/ip4/127.0.0.1/tcp/24069"]
+port = 24069
+addr = "0.0.0.0"
+
+[server_config.origin]
+ipfs_gateway = "ipfs.io"
+
+[consensus_config]
+address = "/ip4/0.0.0.0/udp/28000"
+keypair = "keystore/consensus/primary.key"
+network_keypair = "keystore/consensus/network.key"
+store_path = "data/narwhal_store"
+genesis_committee = "../genesis_committee.json"
+
+[consensus_config.parameters]
+header_num_of_batches_threshold = 32
+max_header_num_of_batches = 1000
+max_header_delay = "100ms"
+min_header_delay = "100ms"
+gc_depth = 50
+sync_retry_delay = "5000ms"
+sync_retry_nodes = 3
+batch_size = 500000
+max_batch_delay = "100ms"
+max_concurrent_requests = 500000
+
+[consensus_config.parameters.block_synchronizer]
+range_synchronize_timeout = "30000ms"
+certificates_synchronize_timeout = "30000ms"
+payload_synchronize_timeout = "30000ms"
+payload_availability_timeout = "30000ms"
+handler_certificate_deliver_timeout = "30000ms"
+
+[consensus_config.parameters.consensus_api_grpc]
+socket_addr = "/ip4/127.0.0.1/tcp/54916/http"
+get_collections_timeout = "5000ms"
+remove_collections_timeout = "5000ms"
+
+[consensus_config.parameters.prometheus_metrics]
+socket_addr = "/ip4/127.0.0.1/tcp/54918/http"
+
+[consensus_config.parameters.network_admin_server]
+primary_network_admin_server_port = 54920
+worker_network_admin_server_base_port = 54922
+
+[consensus_config.parameters.anemo]
+
+[[consensus_config.worker]]
+address = "/ip4/0.0.0.0/udp/28101/http"
+transaction = "/ip4/0.0.0.0/tcp/28102/http"
+keypair = "keystore/consensus/worker-01.key"
