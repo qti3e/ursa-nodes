@@ -7,7 +7,18 @@ Configurations to run 3 [Fleek Network Ursa](https://fleek.network) nodes locall
 Open 3 terminal windows/tabs, cd to each directory and run:
 
 ```
-ursa --coonfig config.toml
+cd node-01
+ursa --config config.toml
+```
+
+```
+cd node-02
+ursa --config config.toml
+```
+
+```
+cd node-03
+ursa --config config.toml
 ```
 
 If you have `ursa` cloned as a neighbour of this repository you can:
