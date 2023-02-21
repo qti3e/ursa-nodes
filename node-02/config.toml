@@ -27,6 +27,7 @@ ipfs_gateway = "ipfs.io"
 
 [consensus_config]
 address = "/ip4/0.0.0.0/udp/28000"
+rpc_domain = "0.0.0.0:8023"
 keypair = "keystore/consensus/primary.key"
 network_keypair = "keystore/consensus/network.key"
 store_path = "data/narwhal_store"
@@ -69,3 +70,6 @@ worker_network_admin_server_base_port = 54922
 address = "/ip4/0.0.0.0/udp/28101/http"
 transaction = "/ip4/0.0.0.0/tcp/28102/http"
 keypair = "keystore/consensus/worker-01.key"
+
+[application_config]
+domain = "0.0.0.0:8014"
