@@ -72,4 +72,4 @@ transaction = "/ip4/0.0.0.0/tcp/38102/http"
 keypair = "keystore/consensus/worker-01.key"
 
 [application_config]
-domain = "0.0.0.0:8014"
+domain = "0.0.0.0:8034"
