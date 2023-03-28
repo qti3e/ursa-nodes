@@ -9,9 +9,9 @@ bootstrap_nodes = ["/ip4/159.223.211.234/tcp/6009/p2p/12D3KooWDji7xMLia6GAsyr4oi
 database_path = "data/ursa_db"
 identity = "default"
 keystore_path = "keystore"
-tracker = "https://tracker.ursa.earth/register"
 kad_replication_factor = 8
 kad_walk_interval = 300
+max_cache_summaries = 10
 
 [provider_config]
 indexer_url = "https://dev.cid.contact"
