@@ -17,7 +17,7 @@ cargo run --manifest-path=../../draco/Cargo.toml -- --config config.toml run
 You can clear the database and storage used by each node by simply doing:
 
 ```
-rm -rf */~
+rm -rf */data
 ```
 # Note
 This runs 3 of the 4 genesis committee nodes which is enough to come to consensus 

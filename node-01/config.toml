@@ -6,7 +6,7 @@ mode = "Dev"
 [consensus]
 address = "/ip4/0.0.0.0/udp/18000"
 mempool_address = "/ip4/0.0.0.0/udp/18002"
-store_path = "~/.fleek/mock/node1/narwhal_store"
+store_path = "data/node1/narwhal_store"
 worker_address = "/ip4/0.0.0.0/udp/18001"
 
 [handshake]
